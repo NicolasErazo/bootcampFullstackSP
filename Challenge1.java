@@ -71,13 +71,13 @@ public class Challenge1 {
         System.out.println(randomString("Tipo A"));
 
         // Falso si esta en la lista, verdadero si no esta!
-        ArrayList<String> ejemplo = new ArrayList<>();
+        ArrayList<String> example = new ArrayList<>();
 
-        ejemplo.add("A");
-        ejemplo.add("B");
-        ejemplo.add("C");
+        example.add("A");
+        example.add("B");
+        example.add("C");
 
-        System.out.println(indexLista("A", ejemplo));
+        System.out.println(indexLista("A", example));
 
     }
 }
