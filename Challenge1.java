@@ -19,7 +19,7 @@ public class Challenge1 {
      * iniciar en “08”
      */
 
-    public static String RandomString(String Type) {
+    public static String randomString(String type) {
 
         String bank = "1234567890";
         String string = "";
@@ -31,7 +31,7 @@ public class Challenge1 {
             string += randomCharacter;
         }
 
-        switch (Type) {
+        switch (type) {
             case "Tipo A":
                 string = "54" + string.substring(0, 8);
                 break;
@@ -52,32 +52,32 @@ public class Challenge1 {
      * retorna un valor true.
      */
 
-    public static boolean IndexLista(String Phrase, ArrayList<String> List) {
+    public static boolean indexLista(String phrase, ArrayList<String> list) {
 
-        boolean Result = List.contains(Phrase);
+        boolean result = list.contains(phrase);
 
-        if (Result) {
-            Result = false;
+        if (result) {
+            result = false;
         } else {
-            Result = true;
+            result = true;
         }
 
-        return Result;
+        return result;
     }
 
     public static void main(String[] args) {
 
         // Tipo A: Inicia en 54 y Tipo B: Inicia en 08
-        System.out.println(RandomString("Tipo A"));
+        System.out.println(randomString("Tipo A"));
 
         // Falso si esta en la lista, verdadero si no esta!
-        ArrayList<String> Ejemplo = new ArrayList<>();
+        ArrayList<String> ejemplo = new ArrayList<>();
 
-        Ejemplo.add("A");
-        Ejemplo.add("B");
-        Ejemplo.add("C");
+        ejemplo.add("A");
+        ejemplo.add("B");
+        ejemplo.add("C");
 
-        System.out.println(IndexLista("A", Ejemplo));
+        System.out.println(indexLista("A", ejemplo));
 
     }
 }
