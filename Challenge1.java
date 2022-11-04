@@ -19,28 +19,28 @@ public class Challenge1 {
      * iniciar en “08”
      */
 
-    public static String cadenaAleatoria(String Tipo) {
+    public static String RandomString(String Type) {
 
-        String banco = "1234567890";
-        String cadena = "";
-        int longitud = 8;
+        String bank = "1234567890";
+        String string = "";
+        int length = 8;
 
-        for (int x = 0; x < longitud; x++) {
-            int indiceAleatorio = (int) (Math.random() * 10);
-            char caracterAleatorio = banco.charAt(indiceAleatorio);
-            cadena += caracterAleatorio;
+        for (int x = 0; x < length; x++) {
+            int randomIndex = (int) (Math.random() * 10);
+            char randomCharacter = bank.charAt(randomIndex);
+            string += randomCharacter;
         }
 
-        switch (Tipo) {
+        switch (Type) {
             case "Tipo A":
-                cadena = "54" + cadena.substring(0, 8);
+                string = "54" + string.substring(0, 8);
                 break;
             case "Tipo B":
-                cadena = "08" + cadena.substring(0, 8);
+                string = "08" + string.substring(0, 8);
                 break;
         }
 
-        return cadena;
+        return string;
     }
 
     /*
@@ -52,9 +52,9 @@ public class Challenge1 {
      * retorna un valor true.
      */
 
-    public static boolean IndexLista(String Frase, ArrayList<String> Lista) {
+    public static boolean IndexLista(String Phrase, ArrayList<String> List) {
 
-        boolean Result = Lista.contains(Frase);
+        boolean Result = List.contains(Phrase);
 
         if (Result) {
             Result = false;
@@ -68,7 +68,7 @@ public class Challenge1 {
     public static void main(String[] args) {
 
         // Tipo A: Inicia en 54 y Tipo B: Inicia en 08
-        System.out.println(cadenaAleatoria("Tipo B"));
+        System.out.println(RandomString("Tipo A"));
 
         // Falso si esta en la lista, verdadero si no esta!
         ArrayList<String> Ejemplo = new ArrayList<>();
@@ -77,7 +77,7 @@ public class Challenge1 {
         Ejemplo.add("B");
         Ejemplo.add("C");
 
-        System.out.println(IndexLista("D", Ejemplo));
+        System.out.println(IndexLista("A", Ejemplo));
 
     }
 }
